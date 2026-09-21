@@ -21,10 +21,10 @@ static void highPriorityTask(void *parameters)
     for (;;)
     {
         ++highTaskRuns;
-        printf("[%s] run %lu -> delay 300 ms (Running -> Blocked)\n",
+        printf("[%s] run %lu -> delay 700 ms (Running -> Blocked)\n",
                taskName,
                (unsigned long)highTaskRuns);
-        vTaskDelay(pdMS_TO_TICKS(300));
+        vTaskDelay(pdMS_TO_TICKS(700));
     }
 }
 static void lowPriorityTask(void *parameters)
