@@ -1,8 +1,10 @@
 # RTOS 与 Task 入门
 
-> 日期：2026-09-21  
-> 学习方式：在 Windows 上观看课程示例  
-> 实践状态：尚未配置环境，也没有亲自创建或运行 Task
+> 日期：2026-09-21
+>
+> 学习方式：课程示例 + Windows FreeRTOS 模拟实验
+>
+> 实践状态：已在现有实验中亲自修改 Task 延时并运行验证
 
 ## 今天接触的内容
 
@@ -61,19 +63,41 @@ xTaskCreate(
 
 任务切换不要求依次经过 Blocked 和 Suspended。Running Task 被抢占后可以回到 Ready；调用延时或等待事件时则可能进入 Blocked。
 
+## 第一次实操：修改 Task 延时
+
+在已经配置好的 VS Code、CMake 和 FreeRTOS Windows 模拟环境中运行了两个实验 Task：
+
+- `HIGH`：优先级 2
+- `LOW`：优先级 1，延时 500 ms
+
+我将 `HIGH` 的延时从 300 ms 修改为 700 ms，并在运行前预测 `LOW` 会运行 5 次。实际输出结果为：
+
+```text
+HIGH：4 次
+LOW：5 次
+```
+
+预测与实际结果一致。
+
+通过这个实验进一步理解：
+
+- 调度器不是让两个 Task 严格轮流执行，而是从 Ready Task 中选择优先级最高的 Task。
+- `LOW` 虽然优先级较低，但它的 500 ms 延时比 `HIGH` 的 700 ms 更早结束；当 `LOW` 已经 Ready、`HIGH` 仍然 Blocked 时，`LOW` 可以运行。
+- 提高一个 Blocked Task 的优先级不会让它提前结束延时，因为优先级只参与 Ready Task 之间的选择。
+- 在固定观察时间内，Task 延时变长通常会减少运行次数；在本实验中，结束条件固定要求 `HIGH` 运行 4 次，因此总运行时间变长，并让 `LOW` 有机会运行更多次。
+
 ## 当前薄弱点
 
 - 还不能完整解释 `xTaskCreate()` 的参数。
-- 对 Ready、Blocked、Suspended 之间的区别还需要通过运行实验巩固。
-- 尚未观察不同优先级和延时设置对任务执行顺序的影响。
+- 对 Ready、Blocked、Suspended 之间的区别仍需继续巩固。
+- 已观察延时变化对执行次数的影响，但还没有亲自修改优先级进行比较。
 
 ## 下一步实践
 
-1. 在 Windows 上配置可运行的 FreeRTOS 学习环境。
-2. 创建两个输出不同信息的 Task。
-3. 观察 Task 的交替运行现象。
-4. 修改优先级与延时时间，比较运行结果。
-5. 根据实验重新解释 Ready、Running 和 Blocked 状态。
+1. 完整说明 `xTaskCreate()` 六个参数的作用。
+2. 修改两个 Task 的优先级，预测并观察调度结果。
+3. 尝试自己新增一个 Task，而不是只修改现有参数。
+4. 继续结合实验解释 Ready、Running 和 Blocked 状态。
 
 ## 参考资料
 
