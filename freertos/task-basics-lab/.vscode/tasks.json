@@ -1,0 +1,56 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "FreeRTOS: Configure",
+      "type": "shell",
+      "command": "cmake",
+      "args": ["--preset", "mingw-debug"],
+      "options": {
+        "cwd": "${workspaceFolder}",
+        "env": {
+          "HTTP_PROXY": "http://127.0.0.1:7897",
+          "HTTPS_PROXY": "http://127.0.0.1:7897"
+        }
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "FreeRTOS: Build",
+      "type": "shell",
+      "command": "cmake",
+      "args": ["--build", "--preset", "mingw-debug"],
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "dependsOn": "FreeRTOS: Configure",
+      "problemMatcher": ["$gcc"],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      }
+    },
+    {
+      "label": "FreeRTOS: Run",
+      "type": "shell",
+      "command": "${workspaceFolder}/build/freertos_task_lab.exe",
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "dependsOn": "FreeRTOS: Build",
+      "problemMatcher": []
+    },
+    {
+      "label": "FreeRTOS: Test",
+      "type": "shell",
+      "command": "ctest",
+      "args": ["--preset", "mingw-debug"],
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "dependsOn": "FreeRTOS: Build",
+      "problemMatcher": [],
+      "group": "test"
+    }
+  ]
+}

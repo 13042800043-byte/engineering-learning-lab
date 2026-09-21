@@ -1,0 +1,24 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Debug FreeRTOS Task Lab",
+      "type": "cppdbg",
+      "request": "launch",
+      "program": "${workspaceFolder}/build/freertos_task_lab.exe",
+      "cwd": "${workspaceFolder}",
+      "stopAtEntry": false,
+      "externalConsole": false,
+      "MIMode": "gdb",
+      "miDebuggerPath": "C:/Program Files/mingw64/bin/gdb.exe",
+      "preLaunchTask": "FreeRTOS: Build",
+      "setupCommands": [
+        {
+          "description": "Enable GDB pretty printing",
+          "text": "-enable-pretty-printing",
+          "ignoreFailures": true
+        }
+      ]
+    }
+  ]
+}
