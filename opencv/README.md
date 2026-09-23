@@ -24,6 +24,10 @@ Result Visualization
 
 最终希望能够独立完成简单的实时视觉程序，并为后续嵌入式视觉、目标检测和更深入的视觉算法学习建立基础。
 
+## Study Notes
+
+- [2026-09-22：OpenCV 摄像头读取与显示](notes/2026-09-22-camera-input-basics.md)
+
 ## Topics
 
 计划学习：
