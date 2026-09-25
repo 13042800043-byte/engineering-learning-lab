@@ -39,3 +39,38 @@ Embedded Linux
 OpenCV / AI Deployment
    ↓
 Embedded Vision
+```
+
+---
+
+# 2. Command Categories
+
+Linux 命令学习成果按用途分类存放，而不是把所有命令写入同一篇笔记：
+
+```text
+linux/
+├── 01-shell-basics/          # Shell、命令结构、参数、数据流
+├── 02-text-processing/       # grep、sort、uniq、cut 等文本处理
+├── 03-permissions/           # chmod、文件权限、sudo
+├── 04-process-management/    # ps、jobs、kill、信号与任务
+├── 05-network-remote/        # SSH、远程命令与网络工具
+├── 06-shell-customization/   # dotfiles、alias、插件与 PATH
+└── 07-ai-cli-tools/          # llm 等 AI 命令行工具
+```
+
+## Current Notes
+
+- [Shell 与命令基础](01-shell-basics/README.md)
+- [文本搜索与处理命令](02-text-processing/README.md)
+- [用户、权限与 sudo](03-permissions/README.md)
+- [进程与任务管理命令](04-process-management/README.md)
+- [网络与远程命令](05-network-remote/README.md)
+- [Shell 配置、别名与插件](06-shell-customization/README.md)
+- [AI 命令行工具](07-ai-cli-tools/README.md)
+
+## Recording Rule
+
+- 分类目录记录对应命令的用途、参数、实验和理解；
+- Weekly Log 记录学习日期与本周进度；
+- 未亲自执行的命令只记录为课程学习或待实践，不写成已完成实验；
+- 同一个命令如果涉及多个主题，以主要用途归类，并通过链接关联其他板块。
