@@ -27,6 +27,7 @@ Result Visualization
 ## Study Notes
 
 - [2026-09-22：OpenCV 摄像头读取与显示](notes/2026-09-22-camera-input-basics.md)
+- [2026-09-27：蓝色区域提取与轮廓标注](notes/2026-09-27-blue-color-detection.md)
 
 ## Topics
 
