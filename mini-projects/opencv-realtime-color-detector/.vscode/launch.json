@@ -1,0 +1,17 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "调试实时蓝色目标检测",
+      "type": "cppvsdbg",
+      "request": "launch",
+      "program": "${workspaceFolder}\\build\\Debug\\opencv-realtime-color-detector.exe",
+      "args": [],
+      "stopAtEntry": false,
+      "cwd": "${workspaceFolder}\\build\\Debug",
+      "environment": [],
+      "console": "integratedTerminal",
+      "preLaunchTask": "构建实时蓝色目标检测"
+    }
+  ]
+}

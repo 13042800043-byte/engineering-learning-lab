@@ -61,23 +61,27 @@ Contour + Area Filter
 Bounding Box + Center Point
 ```
 
-项目已在当前环境中完成构建、自动化测试和一次实际图片处理验证。摄像头实时检测仍属于后续计划。
+项目已在当前环境中完成构建、自动化测试和一次实际图片处理验证。
+
+### [OpenCV Real-time Color Detector](opencv-realtime-color-detector/)
+
+当前已整理实时摄像头版本：
+
+```text
+Camera
+ ↓
+HSV + inRange
+ ↓
+Opening + Closing
+ ↓
+Contour + Area Filter
+ ↓
+Bounding Box + Center + FPS
+```
+
+本次上传前已完成构建验证；摄像头实际检测效果尚未在本次整理中重新确认。
 
 ## Planned Projects
-
-### OpenCV Color Detector — Real-time Upgrade
-
-目标：
-
-识别指定颜色目标并实时绘制 Bounding Box。
-
-涉及：
-
-* HSV
-* Threshold
-* Morphology
-* Contour
-* VideoCapture
 
 ---
 
