@@ -1,0 +1,24 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "调试 OpenCV 示例",
+      "type": "cppvsdbg",
+      "request": "launch",
+      "program": "${workspaceFolder}\\build\\Debug\\mini-project.exe",
+      "args": ["${input:imagePath}"],
+      "stopAtEntry": false,
+      "cwd": "${workspaceFolder}",
+      "environment": [],
+      "console": "integratedTerminal",
+      "preLaunchTask": "构建 OpenCV 示例"
+    }
+  ],
+  "inputs": [
+    {
+      "id": "imagePath",
+      "type": "promptString",
+      "description": "请输入要处理的图片完整路径"
+    }
+  ]
+}

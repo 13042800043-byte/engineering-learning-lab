@@ -41,9 +41,31 @@ Bounding Box
 
 才开始变成一个真正的小项目。
 
+## Current Projects
+
+### [OpenCV Blue Color Detector](opencv-color-detector/)
+
+当前已完成静态图片版本：
+
+```text
+Image
+ ↓
+HSV
+ ↓
+inRange
+ ↓
+Morphological Opening
+ ↓
+Contour + Area Filter
+ ↓
+Bounding Box + Center Point
+```
+
+项目已在当前环境中完成构建、自动化测试和一次实际图片处理验证。摄像头实时检测仍属于后续计划。
+
 ## Planned Projects
 
-### OpenCV Color Detector
+### OpenCV Color Detector — Real-time Upgrade
 
 目标：
 
