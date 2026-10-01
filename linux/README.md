@@ -60,6 +60,7 @@ linux/
 
 ## Current Notes
 
+- [Vim 模式与基本编辑（2026-10-01，课程学习与待实践练习）](notes/2026-10-01-vim-basics.md)
 - [Shell 与命令基础](01-shell-basics/README.md)
 - [文本搜索与处理命令](02-text-processing/README.md)
 - [用户、权限与 sudo](03-permissions/README.md)
