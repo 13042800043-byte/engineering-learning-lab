@@ -60,7 +60,7 @@ linux/
 
 ## Current Notes
 
-- [Vim 模式与基本编辑](02-text-processing/vim-basics.md)
+- [Vim 常用快捷键与编辑操作](02-text-processing/vim-basics.md)
 - [Shell 与命令基础](01-shell-basics/README.md)
 - [文本搜索与处理命令](02-text-processing/README.md)
 - [用户、权限与 sudo](03-permissions/README.md)
