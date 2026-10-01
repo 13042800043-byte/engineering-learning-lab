@@ -50,7 +50,7 @@ Linux 命令学习成果按用途分类存放，而不是把所有命令写入�
 ```text
 linux/
 ├── 01-shell-basics/          # Shell、命令结构、参数、数据流
-├── 02-text-processing/       # grep、sort、uniq、cut 等文本处理
+├── 02-text-processing/       # Vim 文本编辑、grep、sort、uniq、cut 等文本处理
 ├── 03-permissions/           # chmod、文件权限、sudo
 ├── 04-process-management/    # ps、jobs、kill、信号与任务
 ├── 05-network-remote/        # SSH、远程命令与网络工具
@@ -60,7 +60,7 @@ linux/
 
 ## Current Notes
 
-- [Vim 模式与基本编辑（2026-10-01，课程学习与待实践练习）](notes/2026-10-01-vim-basics.md)
+- [Vim 模式与基本编辑](02-text-processing/vim-basics.md)
 - [Shell 与命令基础](01-shell-basics/README.md)
 - [文本搜索与处理命令](02-text-processing/README.md)
 - [用户、权限与 sudo](03-permissions/README.md)
@@ -71,6 +71,7 @@ linux/
 
 ## Recording Rule
 
+- Linux 技术笔记按功能归入现有分类目录，使用主题文件名；同一主题后续学习继续更新原笔记，不另建按日期命名的 `linux/notes/`。
 - 分类目录记录对应命令的用途、参数、实验和理解；
 - Weekly Log 记录学习日期与本周进度；
 - 未亲自执行的命令只记录为课程学习或待实践，不写成已完成实验；
